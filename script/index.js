@@ -3,18 +3,25 @@ function add_tr() {
     var new_string = document.createElement("tr");
     var col_1 = document.createElement("td");
     var col_2 = document.createElement("td");
+    var col_3 = document.createElement("td");
     
     // Устанавливаем значения полей по умолчанию
     col_1.textContent = "Новая задача";
     col_1.onclick = change_task_name;
     col_1.onkeyup = check_button;
     col_1.onblur = set_task_name;
+    col_1.className = "left_col";
     
     col_2.textContent = "Влияю";
     col_2.onclick = change_my_influsion;
+    col_2.className = "left_col"
+    
+    col_3.onclick = change_comment;
+    col_3.onkeyup = check_button;
     
     new_string.appendChild(col_1);
     new_string.appendChild(col_2);
+    new_string.appendChild(col_3);
     
     document.getElementsByTagName("tbody")[0].appendChild(new_string);
 }
@@ -83,5 +90,17 @@ function change_my_influsion(){
     
     this.textContent = "";
     this.appendChild(spisok);
+}
+
+function change_comment(){
+    // мы подставляем в ячейку таблицы поле ввода
+    var bufer = document.createElement("input");
+    bufer.placeholder = this.textContent;
     
+    this.textContent = "";
+    this.appendChild(bufer);
+    
+    bufer.focus();              // Делаем поле ввода активным
+    bufer.onblur = blur_input;  // Устанавливаем событие на потерю фокуса полем ввода
+    this.onclick = null;        // Очищаем событие по клику на поле
 }

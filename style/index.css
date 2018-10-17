@@ -1,0 +1,48 @@
+table{
+    width: 50%;
+    border: 1px solid gray;
+}
+
+.left_col{
+    border-right: 1px solid gray;
+}
+
+td input{
+    width: 95%;
+}
+
+button{
+    font-size: 20px;
+}
+
+td{
+    border-top: 1px solid gray;
+}
+
+#task_h{
+    width: 30%;
+    border-right: 1px solid gray;
+}
+
+#infl_h{
+    width: 20%;
+    border-right: 1px solid gray;
+}
+
+#comm_h{
+    width: 50%;
+}
+
+
+#task_circle{
+    border: 2px solid gray;
+    border-radius: 250px;
+    background-color: dimgrey;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    min-height: 20px;
+    max-height: 200px;
+    min-width: 20px;
+    max-width: 20px;
+}

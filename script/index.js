@@ -24,6 +24,11 @@ function add_tr() {
     new_string.appendChild(col_3);
     
     document.getElementsByTagName("tbody")[0].appendChild(new_string);
+
+    task_circle = document.getElementById("task_circle");
+    influsion_circle = document.getElementById("influsion_circle");
+
+    add_radius(task_circle);
 }
 
 
@@ -103,4 +108,9 @@ function change_comment(){
     bufer.focus();              // Делаем поле ввода активным
     bufer.onblur = blur_input;  // Устанавливаем событие на потерю фокуса полем ввода
     this.onclick = null;        // Очищаем событие по клику на поле
+}
+
+function add_radius(circ){
+    var col_str = docment.getElementsByTagName("td");
+    circ.style.width = col_str.length() * 10 + "px";
 }

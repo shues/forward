@@ -33,14 +33,35 @@ td{
     width: 50%;
 }
 
-
-#task_circle{
-    border: 2px solid gray;
-    border-radius: 0;
-    background-color: dimgrey;
+.influsion_circle{
+    border-radius: 10px;
     position: fixed;
     top: 10px;
     right: 10px;
     height: 20px;
     width: 20px;
+}
+
+.full_influsion{
+    background-color: green;
+}
+
+.half_influsion{
+    background-color: royalblue;
+}
+
+.non_influsion{
+    background-color: gray;
+}
+
+#full_influsion_circle{
+    background-color: green;
+}
+
+#half_influsion_circle{
+    background-color: blue;
+}
+
+#non_influsion_circle{
+    background-color: lightblue;
 }
